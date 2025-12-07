@@ -1,0 +1,53 @@
+export const SKILL_LEVELS = {
+  ROOKIE: 'Rookie',
+  RISING: 'Rising',
+  PRO: 'Pro',
+  EXPERT: 'Expert',
+  MASTER: 'Master',
+  LEGEND: 'Legend',
+} as const;
+
+export const SKILL_LEVEL_SCORES = {
+  ROOKIE: '0-5000',
+  RISING: '5000-15000',
+  PRO: '15000-35000',
+  EXPERT: '35000-60000',
+  MASTER: '60000-100000',
+  LEGEND: '100000+',
+} as const;
+
+export const SKILL_LEVEL_SCORES_MAP = {
+  [SKILL_LEVELS.ROOKIE]: SKILL_LEVEL_SCORES.ROOKIE,
+  [SKILL_LEVELS.RISING]: SKILL_LEVEL_SCORES.RISING,
+  [SKILL_LEVELS.PRO]: SKILL_LEVEL_SCORES.PRO,
+  [SKILL_LEVELS.EXPERT]: SKILL_LEVEL_SCORES.EXPERT,
+  [SKILL_LEVELS.MASTER]: SKILL_LEVEL_SCORES.MASTER,
+  [SKILL_LEVELS.LEGEND]: SKILL_LEVEL_SCORES.LEGEND,
+} as const;
+
+export const SKILL_LEVEL_COLORS = {
+  [SKILL_LEVELS.ROOKIE]: '#00CED1',
+  [SKILL_LEVELS.RISING]: '#00BFFF',
+  [SKILL_LEVELS.PRO]: '#9370DB',
+  [SKILL_LEVELS.EXPERT]: '#FFA500',
+  [SKILL_LEVELS.MASTER]: '#FF00FF',
+  [SKILL_LEVELS.LEGEND]: '#FF4500',
+} as const;
+
+export const SKILL_LEVEL_INNER_COLORS = {
+  [SKILL_LEVELS.ROOKIE]: '#006666',
+  [SKILL_LEVELS.RISING]: '#0066CC',
+  [SKILL_LEVELS.PRO]: '#4B0082',
+  [SKILL_LEVELS.EXPERT]: '#CC6600',
+  [SKILL_LEVELS.MASTER]: '#800080',
+  [SKILL_LEVELS.LEGEND]: '#CC3300',
+} as const;
+
+export const SKILL_LEVEL_ICONS = {
+  [SKILL_LEVELS.ROOKIE]: '/badge-icons/star.svg',
+  [SKILL_LEVELS.RISING]: '/badge-icons/diamond.svg',
+  [SKILL_LEVELS.PRO]: '/badge-icons/trophy.svg',
+  [SKILL_LEVELS.EXPERT]: '/badge-icons/compass.svg',
+  [SKILL_LEVELS.MASTER]: '/badge-icons/crown.svg',
+  [SKILL_LEVELS.LEGEND]: '/badge-icons/legend.svg',
+} as const;

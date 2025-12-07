@@ -1,0 +1,33 @@
+// SCSS variable for base path (empty string for Next.js public folder)
+$containerBasePath: "";
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+
+}
+
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

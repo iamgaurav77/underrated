@@ -1,0 +1,120 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "lineWidth": 100,
+    "formatWithErrors": false
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "useValidAnchor": "off",
+        "useSemanticElements": "error",
+        "useFocusableInteractive": "error"
+      },
+      "complexity": {
+        "noForEach": "off",
+        "noUselessStringConcat": "error",
+        "noUselessFragments": "off",
+        "noExcessiveCognitiveComplexity": {
+          "level": "error",
+          "options": {
+            "maxAllowedComplexity": 10
+          }
+        }
+      },
+      "correctness": {
+        "noUndeclaredVariables": "error",
+        "noUnusedVariables": "error",
+        "noUnusedImports": "error",
+        "useArrayLiterals": "error",
+        "useExhaustiveDependencies": "warn",
+        "useHookAtTopLevel": "error",
+        "noUnusedFunctionParameters": "error"
+      },
+      "performance": {
+        "noBarrelFile": "error",
+        "noReExportAll": "error",
+        "useTopLevelRegex": "error"
+      },
+      "style": {
+        "noRestrictedGlobals": "error",
+        "useConsistentArrayType": "error",
+        "useForOf": "error",
+        "useFragmentSyntax": "error",
+        "noYodaExpression": "error",
+        "useConsistentBuiltinInstantiation": "error",
+        "useDefaultSwitchClause": "error",
+        "useThrowNewError": "error",
+        "useShorthandArrayType": "error"
+      },
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noConfusingVoidType": "off",
+        "useAwait": "warn",
+        "noConsole": "warn",
+        "useErrorMessage": "error",
+        "noDuplicateAtImportRules": "error"
+      },
+      "nursery": {
+        "useAdjacentOverloadSignatures": "error",
+        "noDuplicateElseIf": "error",
+        "noDuplicateCustomProperties": "error",
+        "noDynamicNamespaceImportAccess": "error",
+        "noEnum": "error",
+        "noIrregularWhitespace": "error",
+        "noStaticElementInteractions": "error",
+        "noSubstr": "error",
+        "noUnknownPseudoClass": "error",
+        "noUselessEscapeInRegex": "error",
+        "noValueAtRule": "error",
+        "useAriaPropsSupportedByRole": "error",
+        "useConsistentCurlyBraces": "error"
+      }
+    }
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "single",
+      "semicolons": "always",
+      "arrowParentheses": "asNeeded",
+      "indentStyle": "space"
+    },
+    "globals": ["jest"]
+  },
+  "json": {
+    "parser": {
+      "allowComments": false,
+      "allowTrailingCommas": false
+    },
+    "formatter": {
+      "trailingCommas": "none",
+      "indentStyle": "space"
+    }
+  },
+  "files": {
+    "include": ["src/**", "packages/**"],
+    "ignore": [
+      "./.next/*",
+      "./dist/*",
+      "./node_modules/*",
+      "./docs/*",
+      "./coverage/*",
+      "./resources/*",
+      "./playwright-report/*",
+      "**/webpack.initial.config.js",
+      "**/next.config.js",
+      "**/next-env.d.ts",
+      "**/tsconfig.json",
+      ".vscode/*",
+      "**/remoteTypes.d.ts"
+    ]
+  }
+}
